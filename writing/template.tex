@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{authblk}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{biblatex}
+
+\bibliography{references.bib}
+
+\title{Senior Thesis Proposal}
+\author{Trang Dang}
+
+\makeatletter
+\let\inserttitle\@title
+\let\insertauthor\@author
+\makeatother
+
+\begin{document}
+
+\begin{center}
+  \LARGE{\inserttitle}
+
+  \Large{\insertauthor}
+\end{center}
+
+\section*{Advisors}
+
+My advisors will be Professor Sara Mathieson and Professor Dianna Xu.
+
+\section*{Background}
+
+It's important to understand inheritance, and one of those ways uses Identical By Descent Segments, segments that can only be inherited from the ancestors instead of Identity by State, which is popular in the population. 
+
+Endogamy populations present a unique challenge when it comes to Identical By Descent segments
+
+so much in-group marriages and 
+
+shared IBD among founders
+
+\section*{Problem Statement}
+
+have been previous works designed for populations without not much in-group marriages
+
+\section*{Motivation} 
+
+maybe these inheritance stuff can lead to bipolar disorder or mood disorder?
+
+\section*{Our Contribution}
+
+what is bonsai: an algorithm that is designed to handle this for population without endogamy.
+
+adopt the bonsai background ibd algorithm to handle endogamy (related individuals)
+
+identify a strategy to select sub groups of families to input into this algorithm.
+
+\section*{Works Built Upon}
+
+IBD algorithm bonsai, use hypothesis testing and probability multiplication from there
+
+thread algorithm and computing probabilities in an endogamous pedigree
+
+phasedibd for detecting shared ibd segments
+
+\section*{Risks And Mitigation}
+
+challenge: implement the probability calculation, but has probabilities functions implemented in another work.
+
+challenge 2: how to pick which individuals? case study first, but hopefully will have a strategy to pick in the future. 
+
+\printbibliography
+
+\end{document}

@@ -38,46 +38,25 @@ My advisors will be Professor Sara Mathieson and Professor Dianna Xu.
 
 \paragraph*{Background}
 
-Studying inheritance can help us understand how certain traits 
-
-It's important to understand inheritance, and one of those ways uses Identical By Descent Segments, segments that can only be inherited from the ancestors instead of Identity by State, which is popular in the population. 
-
-Endogamy populations present a unique challenge when it comes to Identical By Descent segments
-
-so much in-group marriages and 
-
-shared IBD among founders
+Understanding inheritance in families is the first step towards understanding how rare genetics disorders can propagate within a family. A lot of these studies rely on Identical-By-Descent segments (IBD), which are segments of the DNA that descendants inherit from their ancestors. 
 
 \paragraph*{Problem Statement}
 
-have been previous works designed for populations without not much in-group marriages
-
-\paragraph*{Motivation} 
-
-maybe these inheritance stuff can lead to bipolar disorder or mood disorder?
+For general populations with lots of genetic admixtures, usually, long matching sequences can only be inherited, and can be confidently declared IBD. 
+However, member of endogamous populations, populations that have lots of in-group marriages and little external admixture, have many matches in their genetic sequences. Hence, when working with these populations, algorithms designed for general population tend to confuse Identical-By-Descent with Identical-By-State segments, which are segments that people share because it's popular in the population, and overrestimate the amount of IBD. 
 
 \paragraph*{Our Contribution}
+We will use relationships from pedigrees to identify the true IBD among the mix of IBD and IBS that algorithms designed for general population output. 
+We will be working with a pedigree of 1338 individuals from the Amish population in Lancaster, PA. In this pedigree, 394 out of the 1338 individuals are genotyped\cite{Finke2021}. 
+We have an approach, Bonsai\cite{Jewett2021}, that takes in two ancestors, their descentdants, IBDs, computes the probabilities, and decides to accept or reject the IBDs. We hope to develop an algorithm that can select the ancestors and descentdants that will result in the most accurate Bonsai results.
 
-what is bonsai: an algorithm that is designed to handle this for population without endogamy.
+% modifies probability, modifies selecting pedigrees
+\paragraph*{Works We Built Upon}
 
-adopt the bonsai background ibd algorithm to handle endogamy (related individuals)
+First, we will preprocess the genotype with \texttt{phasedibd}, an algorithm that identifies IBD for general populations\cite{Freyman2021}. 
+Then, we will use Bonsai, an algorithm that computes the likelihood that an observed IBD is an IBD and not an IBS. We will modify Bonsai's probabilities calculation using methods from our previous paper, \texttt{thread}, such that it accounts for how IBDs at different locations in the sequence are more or less likely inherited together\cite{Finke2021}. Finally, we will design our approach that selects the ancestors to input into the pedigree.
 
-identify a strategy to select sub groups of families to input into this algorithm.
-
-\paragraph*{Works Built Upon}
-
-IBD algorithm bonsai, use hypothesis testing and probability multiplication from there
-
-thread algorithm and computing probabilities in an endogamous pedigree
-
-phasedibd for detecting shared ibd segments
-
-\paragraph*{Risks And Mitigation}
-
-challenge: implement the probability calculation, but has probabilities functions implemented in another work.
-
-challenge 2: how to pick which individuals? case study first, but hopefully will have a strategy to pick in the future. 
+\paragraph*{Challenges} The first challenge for this project is adopting our probability calculations for Bonsai. We believe that if it's too challenging, we can set this task aside. The second challenge is the implementation: it can be difficult working with graphs with cycles and many individuals.
 
 \printbibliography
-
 \end{document}

@@ -1,0 +1,175 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Finke2021}{article}{}
+      \name{author}{11}{}{%
+        {{hash=ce5704290492c55597ff76fdcbd0c8b7}{%
+           family={Finke},
+           familyi={F\bibinitperiod},
+           given={Kelly},
+           giveni={K\bibinitperiod}}}%
+        {{hash=021165cac0f6185a4d729de1508b293e}{%
+           family={Kourakos},
+           familyi={K\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=65898ffb02008adf6286456a03a606e1}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Gabriela},
+           giveni={G\bibinitperiod}}}%
+        {{hash=9cf9cadece2a293664f6ea9323a1591a}{%
+           family={Dang},
+           familyi={D\bibinitperiod},
+           given={Huyen\bibnamedelima Trang},
+           giveni={H\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=c2e09731fee8527bbe064331770db9c9}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Shi\bibnamedelimb Jie\bibnamedelima Samuel},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=b99f1438f9540450df09813e14c09315}{%
+           family={Simons},
+           familyi={S\bibinitperiod},
+           given={Yuval\bibnamedelima B.},
+           giveni={Y\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=c3b5dd4747f830a683d31e7d6852f53c}{%
+           family={Ramdas},
+           familyi={R\bibinitperiod},
+           given={Shweta},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7bc2b2aac9d2b739e535b53bf42f2146}{%
+           family={Schäffer},
+           familyi={S\bibinitperiod},
+           given={Alejandro\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=902c5baf3a1e78c76c2e16186fd31dd0}{%
+           family={Kember},
+           familyi={K\bibinitperiod},
+           given={Rachel\bibnamedelima L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=0ee984ce3ed0222087bb0bd3cbf57ffb}{%
+           family={Bućan},
+           familyi={B\bibinitperiod},
+           given={Maja},
+           giveni={M\bibinitperiod}}}%
+        {{hash=03836674789e436dbb2331c237aaff5c}{%
+           family={Mathieson},
+           familyi={M\bibinitperiod},
+           given={Sara},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=2e052981d0221aad2a98a6a0a6322e1f}{%
+           family={Zhi},
+           familyi={Z\bibinitperiod},
+           given={Degui},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science ({PLoS})}%
+      }
+      \strng{namehash}{f477d2bfa4e1b4c5ecd47e489bead453}
+      \strng{fullhash}{429b5409e57d8c71fe552ac801fb108f}
+      \strng{bibnamehash}{f477d2bfa4e1b4c5ecd47e489bead453}
+      \strng{authorbibnamehash}{f477d2bfa4e1b4c5ecd47e489bead453}
+      \strng{authornamehash}{f477d2bfa4e1b4c5ecd47e489bead453}
+      \strng{authorfullhash}{429b5409e57d8c71fe552ac801fb108f}
+      \strng{editorbibnamehash}{2e052981d0221aad2a98a6a0a6322e1f}
+      \strng{editornamehash}{2e052981d0221aad2a98a6a0a6322e1f}
+      \strng{editorfullhash}{2e052981d0221aad2a98a6a0a6322e1f}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{PLOS} Computational Biology}
+      \field{month}{2}
+      \field{number}{2}
+      \field{title}{Ancestral haplotype reconstruction in endogamous populations using identity-by-descent}
+      \field{volume}{17}
+      \field{year}{2021}
+      \field{pages}{e1008638}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1371/journal.pcbi.1008638
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1371/journal.pcbi.1008638
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1371/journal.pcbi.1008638
+      \endverb
+    \endentry
+    \entry{Jewett2021}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{5}{}{%
+        {{hash=28ae5d21070768244a35d1aac8cdf458}{%
+           family={Jewett},
+           familyi={J\bibinitperiod},
+           given={Ethan\bibnamedelima M},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=7ee7b86fe7c27c9ae2823f2def1e71ff}{%
+           family={McManus},
+           familyi={M\bibinitperiod},
+           given={Kimberly\bibnamedelima F},
+           giveni={K\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=639becdd58727881183f2deea73a85f3}{%
+           family={Freyman},
+           familyi={F\bibinitperiod},
+           given={William\bibnamedelima A},
+           giveni={W\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ed22aae1eecb03031944c475e8529a63}{%
+           family={Auton},
+           familyi={A\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a5a864112d7f8c85b0a2f41a4c4ee35e}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={23andMe\bibnamedelima Research},
+           giveni={2\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{75fce630d88b091af50d6b11fef8112e}
+      \strng{fullhash}{3583673c23a88a60beffd3ccb7bd307a}
+      \strng{bibnamehash}{75fce630d88b091af50d6b11fef8112e}
+      \strng{authorbibnamehash}{75fce630d88b091af50d6b11fef8112e}
+      \strng{authornamehash}{75fce630d88b091af50d6b11fef8112e}
+      \strng{authorfullhash}{3583673c23a88a60beffd3ccb7bd307a}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The American Journal of Human Genetics}
+      \field{number}{11}
+      \field{title}{Bonsai: An efficient method for inferring large human pedigrees from genotype data}
+      \field{volume}{108}
+      \field{year}{2021}
+      \field{pages}{2052\bibrangedash 2070}
+      \range{pages}{19}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

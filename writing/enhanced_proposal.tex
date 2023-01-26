@@ -38,10 +38,9 @@ Trang Dang - thdang@brynmawr.edu
 
 \section{Summary}
 
+% UNFINISHED, how much explaining background IBD and endogamy is there in here?
 
-% UNFINISHED
-
-Understanding inheritance in families is the first step towards understanding how rare genetics disorders can propagate within a family. A lot of these studies rely on Identical-By-Descent segments (IBD), which are segments of the DNA that descendants inherit from their ancestors. 
+Here, we hope to adjust Bonsai\cite{Jewett2021} Background IBD finding algorithm that is originally designed for general populations to accomodate endogamous populations with higher levels of in-group marrianges. 
 
 \section{Problem Statement}
 
@@ -52,7 +51,7 @@ For general populations with lots of genetic admixtures, usually, long matching 
 However, as member of endogamous populations tend to marry within their communities, their descendants have many matches in their genetic sequences. 
 Hence, when working with these populations, algorithms designed for general population tend to overrestimate the amount of IBD by confusing Identical-By-Descent with Identical-By-State segments, which are segments that people share because they are popular in the population. 
 
-The Amish population, located in Lancaster, Pennsylvania, is an endogamous population with rates of Bipolar Disorder and Mood Disorder that are significantly higher than the US averages. We hope to design a method that can correctly identifies IBD segments for this population and contribute to investigating how the disorders are inherited in this population.
+The Amish population, located in Lancaster, Pennsylvania, is an endogamous population with rates of Bipolar Disorder and Mood Disorder that are significantly higher than the US averages. We hope to explore how we can adapt Bonsai\cite{Jewett2021}, an algorithm that removes false positive IBD for general populations, for this Amish population. Hopefully, this can further contribute to understanding how traits are inherited in this community. 
 
 % 19% bipolar, 33% mood (sara Mathieson_smbe_talk_final.pdf)
 
@@ -61,7 +60,13 @@ The Amish population, located in Lancaster, Pennsylvania, is an endogamous popul
 % more details
 We will use relationships from pedigrees to identify the true IBD among the mix of IBD and IBS that algorithms designed for general population output. 
 We will be working with a pedigree of 1338 individuals from the Amish population in Lancaster, PA. In this pedigree, 394 out of the 1338 individuals are genotyped\cite{Finke2021}. 
-We have an approach, Bonsai\cite{Jewett2021}, that takes in two ancestors, their descentdants, IBDs, computes the probabilities, and decides to accept or reject the IBDs. We hope to develop an algorithm that can select the ancestors and descentdants that will result in the most accurate Bonsai results.
+We have an approach, Bonsai\cite{Jewett2021}, that takes in two ancestors, their descentdants, IBDs, computes the probabilities, and decides to accept or reject the IBDs. We hope to first adjust some of the graph traversal in Bonsai so that this algorithm can handle multiple paths. 
+Then, we hope 
+
+% first change is to modify dfs to bfs
+% test changes like these by looking at individual 5 and 8, see how the probabilties are different?
+
+% second change is to design how we should select groups? bigger or smaller?
 
 % We will modify Bonsai's algorithm so that it can compute probabilites even when there are in-group marriages. (higher priority). Then, we will investigate 
 
@@ -73,11 +78,11 @@ We have a complete pedigree of 1338 Amish individuals, and 394 genotypes. We pla
 
 \section{Potential Challenges} The first challenge for this project is adopting our probability calculations for Bonsai. We believe that if it's too challenging, we can set this task aside. The second challenge is the implementation: it can be difficult working with graphs with cycles and many individuals.
 
-% modifies probability, modifies selecting pedigrees
-% \section{Works We Built Upon}
+% challenge 1: difficult debugging the probability computation, then, difficult validating if the better probability computation helps
 
-% First, we will preprocess the genotype with \texttt{phasedibd}, an algorithm that identifies IBD for general populations\cite{Freyman2021}. 
-% Then, we will use Bonsai, an algorithm that computes the likelihood that an observed IBD is an IBD and not an IBS. We will modify Bonsai's probabilities calculation using methods from our previous paper, \texttt{thread}, such that it accounts for how IBDs at different locations in the sequence are more or less likely inherited together\cite{Finke2021}. Finally, we will design our approach that selects the ancestors to input into the pedigree.
+% challenge 2: what is a good baseline? 
+
+% challenge 3: how do i divide the genotyped descendants into groups? 
 
 \section{Team Bios}
 

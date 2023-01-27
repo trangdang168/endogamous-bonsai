@@ -61,30 +61,26 @@ The Amish population, located in Lancaster, Pennsylvania, is an endogamous popul
 We will use relationships from pedigrees to identify the true IBD among the mix of IBD and IBS that algorithms designed for general population output. 
 We will be working with a pedigree of 1338 individuals from the Amish population in Lancaster, PA. In this pedigree, 394 out of the 1338 individuals are genotyped\cite{Finke2021}. 
 We have an approach, Bonsai\cite{Jewett2021}, that takes in two ancestors, their descentdants, IBDs, computes the probabilities, and decides to accept or reject the IBDs. We hope to first adjust some of the graph traversal in Bonsai so that this algorithm can handle multiple paths. 
-Then, we hope 
-
-% first change is to modify dfs to bfs
-% test changes like these by looking at individual 5 and 8, see how the probabilties are different?
-
-% second change is to design how we should select groups? bigger or smaller?
-
-% We will modify Bonsai's algorithm so that it can compute probabilites even when there are in-group marriages. (higher priority). Then, we will investigate 
+Then, we hope to identify an approach to select the two ancestors that we can put into Bonsai.  
 
 \section{Evaluation Plan}
 
-We have a complete pedigree of 1338 Amish individuals, and 394 genotypes. We plan to use \texttt{ped-sim} to simulate IBDs from the genotypes and the pedigree. Then, we will use these simulations as the ground truth to evaluate the IBDs that we've idenfied.
+We have a complete pedigree of 1338 Amish individuals, and 394 genotypes. We plan to use \texttt{ped-sim} to simulate IBDs from the genotypes and the pedigree. Then, we will use these simulations as the ground truth to evaluate the background IBDs that we've dropped.
+To evaluate changes to the algorithm's implementation (such as replacing depth-first search 
+with breadth first search), we will compare if the modified Bonsai or the original Bonsai return a set of IBD that most closely match the ground truth. 
+To identify an approach that selects the best two sub-pedigrees to input into Bonsai, if we have several different criteria, we will observe how each of these criteria perform on small cases, and, if possible, we will evaluate how the outputs of each criteria compare against the ground truth. 
 
-// what is the baseline for our evaluation?
+\section{Potential Challenges} 
 
-\section{Potential Challenges} The first challenge for this project is adopting our probability calculations for Bonsai. We believe that if it's too challenging, we can set this task aside. The second challenge is the implementation: it can be difficult working with graphs with cycles and many individuals.
+We have multiple challenges because of the complex natures of pedigrees.
 
-% challenge 1: difficult debugging the probability computation, then, difficult validating if the better probability computation helps
+First, it's difficult working with graphs with cycles and many individuals. We can do case studies with small pedigrees of 10 individuals, but the full pedigree of more than 1000 individuals will contain different and complicated edge cases. We hope to alleviate this challenge by carefully study the relationships in the small pedigree. 
 
-% challenge 2: what is a good baseline? 
-
-% challenge 3: how do i divide the genotyped descendants into groups? 
+Secondly, modifying an existing implementation of an approach is extremely time-consuming. Therefore, we would try to be cautious. 
 
 \section{Team Bios}
+
+Trang Dang has been working on algorithms that works with Identical-By-Descent segments for 3 years in her research project, and this is one last direction she wants to investigate before graduating. She has worked with Bonsai before, so adjusting the algorithm sounds less intimidating. She also had experience regarding working with this Amish pedigree from a previous research project.
 
 \printbibliography
 \end{document}
